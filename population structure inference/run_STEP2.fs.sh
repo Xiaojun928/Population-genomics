@@ -1,10 +1,5 @@
 #!/bin/bash
 
-APP_NAME=AMD_small
-NP=1
-RUN="RAW"
-
-
 echo \>\>\> STEP2.s1: preparing recfile ...
 ./STEP2.s1_1*.py
 ./STEP2.s1_2*.sh > log.STEP2.s1.txt
