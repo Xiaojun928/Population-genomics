@@ -48,7 +48,7 @@
 	close OUT;
 #####run YN00 
 	chdir("./YN00");
-	system("/home-fn/users/nscc1082/software/paml4.8/bin/yn00 yn00.ctl");	
+	system("/yourpath/paml4.8/bin/yn00 yn00.ctl");	
 	chdir("../");
 #### extract YN00 output
 	open YIN,"./YN00/yn.out" or die "can't open $!";
