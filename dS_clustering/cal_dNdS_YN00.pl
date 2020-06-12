@@ -4,7 +4,7 @@
 #Usage: ./cal_dNdS_YN00.pl number_of_strians
 ###########################################
 
-
+`makdir dNdS`;
 ###extract dN dS results from the YN00 method
   my $num_genes=$ARGV[0];
   opendir DH,"./core_genes" or die "can't opendir $!";
