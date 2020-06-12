@@ -118,3 +118,7 @@ median(C2_mean_dS[which(C2_mean_dS[,1] %in% R1.pairs),3])  #within Clade R-I
 median(C2_mean_dS[which(C2_mean_dS[,1] %in% R2.pairs),3])  #within Clade R-II
 median(C2_mean_dS[which(C2_mean_dS[,1] %in% R1.R2.pairs),3])  #between clade R-I and Clade R-II
 
+
+##write the dS for interested gene cluster, "c*" is determined by the mean/median ds of each cluster
+ordered.dS %>% filter(cluster == 'c2') %>% write.csv("outlier_genes.csv")
+
