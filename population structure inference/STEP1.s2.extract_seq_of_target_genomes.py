@@ -1,4 +1,4 @@
-#!/home-fn/users/nscc1082/software/software/Python-2.7.9/bin/python
+#!/usr/bin/env python
 
 import os
 import sys
@@ -7,7 +7,7 @@ import sys
 # it's allowed that ref genome is not one of the target genomes
 
 
-xmfa = "../mauve_out.xmfa.renamed"
+xmfa = "mauve_out.xmfa.renamed"
 genome_files = ["target_genomes.txt", "ref_genome.txt"]
 
 
@@ -28,7 +28,8 @@ with open(xmfa) as f, open("mauve_out.xmfa.renamed.selected", "w") as f2:
     num_seq = 0
     buff = ""
     while line:
-	genome = line.split("|")[1].split("_")[2]
+	#genome = line.split("|")[1].split("_")[2]
+	genome = line.split("|")[1]
 	header = line
 	seq = f.readline()
 	if genome in list_genomes:

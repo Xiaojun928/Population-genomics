@@ -1,5 +1,5 @@
 #!/bin/sh
-APP_NAME="AMD_small"
+APP_NAME="FN_small"
 RUN="RAW"
 NP=1 
 
@@ -24,13 +24,12 @@ NP=1
 #$ fs -h s4iters
 #Help for Parameter s4iters : Number of maximization steps when finding the best state from which the tree is built. (default: 10000)
 
-fs finestructure -x 100000 -y 100000 -z 100 \
-    my_res.unnamed.chunkcounts.out \
-    my_res.unnamed.mcmc.xml
+fs finestructure -x 100000 -y 100000 -z 100  my_res.chunkcounts.out  my_res.mcmc.xml
+
 
 fs finestructure -x 10000 -m T \
-    my_res.unnamed.chunkcounts.out \
-    my_res.unnamed.mcmc.xml \
-    my_res.unnamed.mcmc.tree.xml
+    my_res.chunkcounts.out \
+    my_res.mcmc.xml \
+    my_res.mcmc.tree.xml
 
 

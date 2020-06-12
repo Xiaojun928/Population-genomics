@@ -1,4 +1,4 @@
-#!/home-fn/users/nscc1082/software/software/Python-2.7.9/bin/python
+#!/usr/bin/env python
 
 import os
 import sys
@@ -11,7 +11,7 @@ list_genomes = []
 with open("target_genomes.txt")  as f:
     line = f.readline()
     while line:
-	list_genomes.append(line[:-1].split("\t")[0])
+	list_genomes.append(line[:-1])
 	line = f.readline()
 
 
@@ -21,10 +21,11 @@ ref_genome = ""
 list_contigs = []
 with open("ref_genome.txt") as f:
     ref_genome = f.readline()[:-1]
-with open("../%s.contig1000.fa" % ref_genome) as f:
+with open("%s.fna" % ref_genome) as f:
     line = f.readline()
     while line:
-	contig_name = "%s_%s" % (ref_genome, line.split("_")[1]	)
+	contig_name = "%s_%s" % (ref_genome, line.split("_")[1].split(" ")[0])
+	print (contig_name)
 	dict_contigs[contig_name] = f.readline()[:-1]
 	list_contigs.append(contig_name)
 	line = f.readline()

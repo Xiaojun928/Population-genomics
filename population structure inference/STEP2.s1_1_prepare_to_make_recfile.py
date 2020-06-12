@@ -1,10 +1,10 @@
-#!/home-fn/users/nscc1082/software/software/Python-2.7.9/bin/python
+#!/usr/bin/env python
 
 import os
 import sys
 
 script = "STEP2.s1_2_make_refeile.sh" 
-program = "/home-fn/users/nscc1082/software/fs-2.0.7/scripts/makeuniformrecfile.pl"
+program = "/yourpath/fs-2.0.7/scripts/makeuniformrecfile.pl"
 
 with open(script, "w") as f:
     for ffile in os.listdir("."):

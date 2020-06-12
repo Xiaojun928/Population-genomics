@@ -1,4 +1,4 @@
-#!/home-fn/users/nscc1082/software/software/Python-2.7.9/bin/python
+#!/usr/bin/env python
 
 import os
 import sys
@@ -70,7 +70,8 @@ with open("mauve_out.xmfa.renamed.selected") as f:
 	adjust_align_start = 0  # num of bp cut from the start of the alignment (NOT CONTIG!!!); the alignment will be cut to [adjust_align_start:adjust_align_end]
 	adjust_align_end = 0	# num of bp cut form the end of the alignment (NOT CONTIG!!!) (<0)
 	while line and not line.startswith("="):
-	    genome = line.split("|")[1].split("_")[2]
+	    #genome = line.split("|")[1].split("_")[2]
+	    genome = line.split("|")[1]
 	    pos_str = line.split("|")[2]
 	    strand = line.split("|")[3][0]
 	    seq = f.readline()[:-1]
@@ -221,7 +222,7 @@ with open("target_genomes.txt") as f, open("idfile.txt", "w") as f2:
         if not line.startswith("#") and len(line)>1:
 	    #list_genomes.append(line[:-1].split("\t")[0])
 	    list_genomes.append(line[:-1])
-	    f2.write("%s" % line[1:].replace("\t", "_"))
+	    f2.write("%s" % line[0:].replace("\t", "_"))
         line = f.readline()
 
 

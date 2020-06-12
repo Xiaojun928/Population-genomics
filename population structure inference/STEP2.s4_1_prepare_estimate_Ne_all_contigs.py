@@ -1,4 +1,4 @@
-#!/home-fn/users/nscc1082/software/software/Python-2.7.9/bin/python
+#!/usr/bin/env python
 
 import os
 import sys
@@ -42,5 +42,5 @@ with open(script, "w") as  f:
 	for ind in range(1,(num_indv+1)):
 	    f.write("echo \>\>\>IND %d of %d, %s\n" % (ind, num_indv, rfile))
             f.write("/home-fn/users/nscc1082/software/orderedPainting-master/chromopainter-0.0.4/chromopainter")
-	    f.write(" -a %d %d %s -j -g ./%s/%s -r %s -o ./%s/%s.ind%d\n\n" % (ind, ind, globalparams, ddir, pfile, rfile, ddir, rfile, ind))
+	    f.write(" -b -a %d %d %s -j -g ./%s/%s -r %s -o ./%s/%s.ind%d\n\n" % (ind, ind, globalparams, ddir, pfile, rfile, ddir, rfile, ind))
 os.system("chmod +x %s" % script)
