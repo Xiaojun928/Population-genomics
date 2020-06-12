@@ -31,11 +31,9 @@ pair.order <- pair.to.label[pairs.wanted,]
 pair.order <- pair.order[order(pair.order[,2]),]
 
 ordered.dS <- ds_mtx[,row.names(pair.order)]
-ordered.dS <- rbind(ordered.dS,as.character(pair.order[,2]))
-#row.names(ordered.dS)[2561] <- "class_label" ## 1more rows
+#ordered.dS <- rbind(ordered.dS,as.character(pair.order[,2]))
+
 #write.table(ordered.dS,file = "ordered_dS.txt",sep = "\t",quote = F)
-
-
 
 
 #The list of K-determination methods
@@ -50,7 +48,7 @@ index.list0 <- c("kl", "ch", "hartigan","scott", "marriot", "trcovw", "tracew",
 #Not all  K-determination methods are applicable for the dataset
 #So, test each method to see if it's applicable for your dataset,
 #applicable one will be included into index.list
-for i in (index.list0)
+for (i in index.list0)
 {
  NbClust(ordered.dS, distance = 'euclidean',
         min.nc = 2, max.nc = 10, method = 'kmean',
@@ -96,23 +94,27 @@ C1_mean_dS <- meandS[which(meandS[,2]=="c1"),]
 C2_mean_dS <- meandS[which(meandS[,2]=="c2"),]
 
 #for cluster1 mean
-mean(C1_mean_dS[which(C1_mean_dS[,1] %in% rownames(pair.order)[1:3]),4])  #within clade R-I
-mean(C1_mean_dS[which(C1_mean_dS[,1] %in% rownames(pair.order)[43:120]),4])  #within clade R-II
-mean(C1_mean_dS[which(C1_mean_dS[,1] %in% rownames(pair.order)[4:42]),4])  #between clade R-I and Clade R-II
+R1.pairs <- rownames(pair.order[which(pair.order$labels=="C1_C1"),])
+R2.pairs <- rownames(pair.order[which(pair.order$labels=="C2_C2"),])
+R1.R2.pairs <- rownames(pair.order[which(pair.order$labels=="C1_C2"),])
+
+mean(C1_mean_dS[which(C1_mean_dS[,1] %in% R1.pairs),4])  #within clade R-I
+mean(C1_mean_dS[which(C1_mean_dS[,1] %in% R2.pairs),4])  #within clade R-II
+mean(C1_mean_dS[which(C1_mean_dS[,1] %in% R1.R2.pairs),4])  #between clade R-I and Clade R-II
 
 #for cluster2 mean
-mean(C2_mean_dS[which(C2_mean_dS[,1] %in% rownames(pair.order)[1:3]),4])  #within clade R-I
-mean(C2_mean_dS[which(C2_mean_dS[,1] %in% rownames(pair.order)[43:120]),4])  #within clade R-II
-mean(C2_mean_dS[which(C2_mean_dS[,1] %in% rownames(pair.order)[4:42]),4])  #between clade R-I and Clade R-II
+mean(C2_mean_dS[which(C2_mean_dS[,1] %in% R1.pairs),4])  #within clade R-I
+mean(C2_mean_dS[which(C2_mean_dS[,1] %in% R2.pairs),4])  #within clade R-II
+mean(C2_mean_dS[which(C2_mean_dS[,1] %in% R1.R2.pairs),4])  #between clade R-I and Clade R-II
 
 
 #for cluster1 median
-median(C1_mean_dS[which(C1_mean_dS[,1] %in% rownames(pair.order)[1:3]),3])  #within Clade R-I
-median(C1_mean_dS[which(C1_mean_dS[,1] %in% rownames(pair.order)[43:120]),3])  #within Clade R-II
-median(C1_mean_dS[which(C1_mean_dS[,1] %in% rownames(pair.order)[4:42]),3])  #between clade R-I and Clade R-II
+median(C1_mean_dS[which(C1_mean_dS[,1] %in% R1.pairs),3])  #within Clade R-I
+median(C1_mean_dS[which(C1_mean_dS[,1] %in% R2.pairs),3])  #within Clade R-II
+median(C1_mean_dS[which(C1_mean_dS[,1] %in% R1.R2.pairs),3])  #between clade R-I and Clade R-II
 
 #for cluster2 median
-median(C2_mean_dS[which(C2_mean_dS[,1] %in% rownames(pair.order)[1:3]),3])  #within Clade R-I
-median(C2_mean_dS[which(C2_mean_dS[,1] %in% rownames(pair.order)[43:120]),3])  #within Clade R-II
-median(C2_mean_dS[which(C2_mean_dS[,1] %in% rownames(pair.order)[4:42]),3])  #between clade R-I and Clade R-II
+median(C2_mean_dS[which(C2_mean_dS[,1] %in% R1.pairs),3])  #within Clade R-I
+median(C2_mean_dS[which(C2_mean_dS[,1] %in% R2.pairs),3])  #within Clade R-II
+median(C2_mean_dS[which(C2_mean_dS[,1] %in% R1.R2.pairs),3])  #between clade R-I and Clade R-II
 
