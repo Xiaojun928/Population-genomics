@@ -1,7 +1,5 @@
 #!/bin/bash
-APP_NAME=AMD_small
-NP=1
-RUN="RAW"
+
 
 #echo \>\>\> Generating genome pos table ...
 #./generate_genome_pos_table.py
