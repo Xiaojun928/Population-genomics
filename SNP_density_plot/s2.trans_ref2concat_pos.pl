@@ -1,12 +1,11 @@
 #!/usr/bin/perl -w
 ##As the input of cfml is a concatenated WGA of all core LCB,
 ##the inferred reombination regions is coordinated with local concatenated WGA.
-##When mapping refcombination regions to the ref genome, positions need 
-##to be transformed.
-#1. Transform ref pos to local WGA pos, gaps in ref LCB should not be ignored
+##When mapping refcombination regions to the ref genome, positions need to be transformed.
+##Transform ref pos to local WGA pos, gaps in ref LCB should not be ignored.
 
 open OUT,">localpos_concate_LCB.txt";
-open IN,"pos_coreLCB2ref.txt" || die "can't open $!";
+open IN,"pos_coreLCB2ref.txt" || die "can't open $!";  ##extracted from the core genome alignments
 <IN>;
 my $line1 = <IN>;
 chomp $line1;
