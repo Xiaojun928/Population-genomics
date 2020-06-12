@@ -1,4 +1,4 @@
-setwd("F:/collaboration/Minglei/190731_re-analysis/05_snp_dens_plot")
+##the chr_len and pls_len should be modified based on your data
 
 C1.snp <- read.table("C1_SNP_pos.txt")[,1]
 C2.snp <- read.table("C2_SNP_pos.txt")[,1]
