@@ -24,12 +24,14 @@ step3: sort the WGA based on a reference genome (a closed complete genome is bet
 step4: concatenate WGA based on a reference genome, the output is a fasta file
 > s4.conct_LCB.pl
 
-step5: run clonalframeML
-> s5.clonalFrameML_recomb.sh
+step5: estimate the kappa parameter
+> s5.phyml_kappa.sh
 
-step6: get the r/m ratio from file *output/*out.em.txt
+step6: run clonalframeML
+> s6.clonalFrameML_recomb.sh
+
+step7: get the r/m ratio from file *output/*out.em.txt
 
 * r/m = Rho/theta/(1/delta)*nu 
 
 
-Additional part -- [kappa estimation]()
