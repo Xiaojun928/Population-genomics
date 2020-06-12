@@ -1,4 +1,4 @@
-#!/home-fn/users/nscc1082/software/software/Python-2.7.9/bin/python
+#!/usr/bin/env python
 
 # this script 1) reformat the header of xmfa file to strain name only
 # 2) filter only alignments that contain all analyzed genomes and stored in *.reformatted
