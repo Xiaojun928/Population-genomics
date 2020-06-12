@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 ###########################################
-#Usage: ./step5.cal_dNdS_YN00.pl #strians
+#Usage: ./cal_dNdS_YN00.pl number_of_strians
 ###########################################
 
 
