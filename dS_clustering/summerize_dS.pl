@@ -2,7 +2,7 @@
 
 open OUT, ">dS_summary.txt";
 print OUT "famid";
-open IN, "dNdS/OG0000022.dNdS" || die "$!";
+open IN, "dNdS/*.dNdS" || die "$!";
 while(<IN>)
 {
  next if(/gene/);
