@@ -13,9 +13,9 @@ population_structure_inference
 dS_clustering_for_recombined_genes
 
 
+#
 
-
-Here is the list of common software used for population genomics analysis:
+You may need to learn about some commonly used software in population genomics analysis before utilizing these scripts:
 
 [fineStructure](https://people.maths.bris.ac.uk/~madjl/finestructure/finestructure_info.html)
 
