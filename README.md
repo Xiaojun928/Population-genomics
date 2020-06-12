@@ -4,14 +4,13 @@ This repository contains various analysis scripts for analysis of microbial [pop
 
 The following modules were employed in this [study]():
 
-SNP_density_plot
+1. SNP density plot
 
-recombination_inference
+2. Recombination inference
 
-population_structure_inference
+3. Population structure inference
 
-dS_clustering_for_recombined_genes
-
+4. Recombined genes inference based on pairwise dS values
 
 #
 
