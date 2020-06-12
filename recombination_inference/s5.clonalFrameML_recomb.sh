@@ -3,7 +3,7 @@ APP_NAME=FN_small
 RUN="RAW"
 NP=4
 
-ClonalFrameML Roseovairus_pruned.nwk concate_coreLCB.fasta core_wga.out -kappa 3.38 -emsim 100
+ClonalFrameML Roseovairus_pruned.nwk concate_coreLCB.fasta core_wga.out -emsim 100
 
 R CMD BATCH '--args core_wga.out' cfml_results.R
 mkdir coreWGA_output
