@@ -5,7 +5,7 @@ use warnings;
 # 
 # Usage: sort the Blocks in XMFA file by the specified refrence strain (with closed genome)
 
-# Input: XMFA files 
+# Input: XMFA files of core genome alignments from s2.get_coreLCB.sh
 
 # Output: ordered XMFA file
 
