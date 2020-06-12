@@ -1,11 +1,9 @@
 #!/usr/bin/perl -w 
 
 #######################
-#Input1: a file contains genomic regions identified as recombinant by cfml
-#Input2: core genome alignments
+#Input: core genome alignments
 #Output: concatenated core genome alignments orderd in reference genome
-#Usage: ./delete_sites.pl roseo_core_500_sorted.xmfa
-#get homoplasious SNP position, delete it if it is in recombined regions 
+#Usage: ./s4.conct_LCB.pl core_500_sorted.xmfa
 #######################
 
 my $in1 = $ARGV[0];
