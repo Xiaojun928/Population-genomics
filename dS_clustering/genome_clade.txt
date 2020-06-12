@@ -1,0 +1,16 @@
+xm-a-151	C1
+xm-d-517	C1
+xm-m-339-2	C1
+xm-a-104	C2
+xm-a-134	C2
+xm-g-7	C2
+xm-m-309	C2
+xm-m-314	C2
+xm-m-354	C2
+xm-m-378	C2
+xm-m-379	C2
+xm-v-201	C2
+xm-v-204	C2
+xm-v-208	C2
+xm-v-209	C2
+xm-v-225	C2
