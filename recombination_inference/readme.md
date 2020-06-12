@@ -25,7 +25,7 @@ step4: concatenate WGA based on a reference genome, the output is a fasta file
 > s4.conct_LCB.pl
 
 step5: estimate the kappa parameter
-> s5.phyml_kappa.sh
+> s5.phyml_est_kappa.sh
 
 step6: run clonalframeML
 > s6.clonalFrameML_recomb.sh
