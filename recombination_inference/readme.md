@@ -1,7 +1,9 @@
 This pipeline can infer the recombination events and the Rho/theta, r/m ratio
 
 **Input1**: whole-genome sequences of your strains (fasta file)
+
 **Input2**: concatenation-based genome tree of your strains
+
 **Output**: please see [here](https://github.com/xavierdidelot/clonalframeml/wiki)
 
 Preparation files:
@@ -29,3 +31,5 @@ step6: get the r/m ratio from file *output/*out.em.txt
 
 * r/m = Rho/theta/(1/delta)*nu 
 
+
+Additional part -- [kappa estimation]()
