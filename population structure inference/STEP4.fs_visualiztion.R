@@ -1,3 +1,4 @@
+#!usr/bin/R
 ###This script was modified from Daniel Lawson
 ##################################################################
 ## Finestructure R Example
