@@ -7,3 +7,6 @@ Please refer to [Sun Y, Luo H. Homologous Recombination in Core Genomes Facilita
 **Input**: nulceotide alignments of single-copy core genes
 
 **Output**: multiple clusters of genes and corresponding mean/median ds values
+
+
+In case that the genomes are not compelete (e.g SAG), we may have limited single-copy core gene families. One possible solution is to employ missing data imputation on the dS matrix. [Here](https://www.r-bloggers.com/2019/06/intoducing-clustimpute-a-new-approach-for-k-means-clustering-with-build-in-missing-data-imputation/), the author provided a fantastic way to do this.
