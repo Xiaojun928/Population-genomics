@@ -6,7 +6,8 @@
 #Usage: ./s1.SNP_density_pre.pl roseo_core_500_sorted.xmfa
 #Get SNP position. Note that the strand of ref strains matters a lot !!!
 #transform the position when the negative strand of ref is used!!!
-#because the recombined regions will be mapped later
+#because the ref genome sequence with '-' marker in one LCB came from the 
+#reversed complement, which will lead to a wrong position of SNPs 
 #######################
 
 my $in1 = $ARGV[0];
